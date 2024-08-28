@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat';
+}
+
+body {
+    background-color: #272727;
+    animation: transitionIn 1s;
+    color: white;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateY(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+
+/************* HEADER *************/
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: #101010;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.inner-header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-container {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo-container h1 {
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Montserrat';
+    font-size: 32px;
+    font-weight: 200;
+}
+
+.logo-container h1 span {
+    font-weight: 800;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a:last-child {
+    padding-right: 0;
+}
+
+.navigation a li {
+    /* width: 120px; */
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 16px;
+}
+
+.navigation a li:hover,
+.navigation a li:focus{
+
+    color: rgb(206, 206, 206);
+    transition: all 0.4s;
+}
+
+.navigation a li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #4fb8c0;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    transition: all 0.4s;
+    pointer-events: none;
+}
+
+.navigation a li:hover::after,
+.navigation a li:focus::after {
+    width: 100%;
+}
+
+/************* ANA SAYFA *************/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/index-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.content button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #4fb8c0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.content button span {
+    background: #4fb8c0;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.content button:hover span{
+    width: 100%;
+}
+
+/************* Ürünler *************/
+.container-stock {
+    margin-top: 175px;
+    margin-bottom: 75px;
+    padding: 40px;
+    border-radius: 15px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    margin-left: -540px;
+    background-color: #1d1d1d;
+}
+
+/************* Ürünler : Kategori *************/
+.category {
+    width: 100%;
+    /* position: absolute;*/
+    /* top: 50%; */
+    transform: translateY(-50%);
+    /* text-align: center; */
+    float: left;
+    /* height: 100%; */
+    margin-top: 40px;
+}
+
+.category button {
+    width: 100px;
+    padding: 15px 0px;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid #4fb8c0;
+    box-shadow: rgba(18, 83, 126, 0.781) 0px 0px 8px 0px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+
+.category button span {
+    background: #4fb8c0;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.category button:hover span {
+    width: 100%;
+}
+
+/************* Ürünler : Container *************/
+.container-stock table {
+    margin-top: 25px;
+    width: 1000px;
+}
+
+.container-stock tr {
+    height: 375px;
+}
+
+.container-stock td {
+    vertical-align: top;
+}
+
+.container-stock a {
+    color: white;
+}
+
+.container-stock p {
+    width: 275px;
+}
+
+.container-stock h5 span {
+    float: left;
+    margin-left: 70px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.container-stock h5 {
+    color: #bbbbbb;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    margin-right: 70px;
+}
+
+.container-stock img {
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #242424;
+    border: 2px solid #4fb8c0;
+    box-shadow: rgba(18, 83, 126, 0.781) 5px 5px 15px 0px;
+    transition: all 0.5s;
+}
+
+.container-stock img:hover {
+    width: 265px;
+    height: 265px;
+    transition: all 0.5s;
+}
+
+.container-stock .indirimsiz {
+    margin-right: 0px;
+    text-align: center;
+}
+
+.container-item-page {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    padding: 40px;
+    border-radius: 15px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    margin-left: -540px;
+    background-color: #1d1d1d;
+}
+
+/************* Hakkımızda *************/
+.container-about-us {
+    margin-top: 250px;
+    padding: 40px;
+    border-radius: 15px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    margin-left: -540px;
+    background-color: #1d1d1d;
+    box-shadow: rgba(11, 49, 75, 0.507) 8px 8px 15px 0px;
+    
+}
+
+.container-about-us h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.container-about-us p {
+    position: absolute;
+    margin-top: 40px;
+    margin-right: 350px;
+    font-weight: 300;
+}
+
+.container-about-us img {
+    float: right;
+    border-radius: 10px;
+    box-shadow: rgba(18, 83, 126, 0.781) 8px 8px 15px 0px;
+}
+
+/*
+.footer {
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: pink;
+  padding: 10px;
+}
+*/
